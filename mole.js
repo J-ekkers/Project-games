@@ -18,7 +18,6 @@ function setGame() {
         document.getElementById("board").appendChild(tile);
     }
     setInterval(setMole, 1000); // 1000 miliseconds = 1 second, every 1 second call setMole
-    setInterval(setPlant, 2000); // 2000 miliseconds = 2 seconds, every 2 second call setPlant
 }
 
 function getRandomTile() {
@@ -45,24 +44,6 @@ function setMole() {
     currMoleTile.appendChild(mole);
 }
 
-function setPlant() {
-    if (gameOver) {
-        return;
-    }
-    if (currPlantTile) {
-        currPlantTile.innerHTML = "";
-    }
-    let plant = document.createElement("img");
-    plant.src = "./piranha-plant.png";
-
-    let num = getRandomTile();
-    if (currMoleTile && currMoleTile.id == num) {
-        return;
-    }
-    currPlantTile = document.getElementById(num);
-    currPlantTile.appendChild(plant);
-}
-
 function selectTile() {
     if (gameOver) {
         return;
@@ -71,8 +52,5 @@ function selectTile() {
         score += 1;
         document.getElementById("score").innerText = score.toString(); //update score html
     }
-    else if (this == currPlantTile) {
-        document.getElementById("score").innerText = "GAME OVER: " + score.toString(); //update score html
-        gameOver = true;
-    }
+ 
 }
