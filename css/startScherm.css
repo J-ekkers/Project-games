@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px    ;
+background-color: #00AFB9;
+}
+
+header{
+    font-size: 40px;
+  text-align: center;
+  margin-top: 5%;
+    font-family: 'Silkscreen', sans-serif; 
+}
+.glitch-wrapper {
+    width: 17%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #ffffff;
+    margin: auto;
+ }
+ .glitch {
+    position: relative;
+    font-size: 120px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #000000;
+    letter-spacing: 8px;
+    z-index: 1;
+ }
+ .glitch:before,
+ .glitch:after {
+    display: block;
+    content: attr(data-glitch);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+ }
+ .glitch:before {
+    animation: glitch-color 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+    color: #f70000;
+    z-index: -1;
+ }
+ .glitch:after {
+    animation: glitch-color 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+    color: #0004ff;
+    z-index: -2;
+ }
+ @keyframes glitch-color {
+    0% {transform: translate(0);}
+    20% {transform: translate(-3px, 3px);}
+    40% { transform: translate(-3px, -3px) }
+    60% {transform: translate(3px, 3px); }
+    80% {transform: translate(3px, -3px)}
+    to {transform: translate(0);}
+ }
+
+ button{
+    width: 300px;
+    height: 100px;
+    margin-left: 800px;
+    margin-top: 400px ;
+    border-radius: 30px;
+    font-size: 30px;
+   font-family: 'Silkscreen', sans-serif;
+   border-width: 5px;
+   border-color: black;
+ }
+ 
+ button:hover{
+   background-color:#B90A00;
+ }

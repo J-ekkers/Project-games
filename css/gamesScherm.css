@@ -2,14 +2,11 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px    ;
-background-color: lightgray;
+background-color: #00AFB9;
 }
 
-header{
-    font-size: 40px;
-  text-align: center;
-  margin-top: 5%;
-    font-family: 'Silkscreen', sans-serif; ;
+body{
+    margin-top: 5%;
 }
 .glitch-wrapper {
     width: 17%;
@@ -56,13 +53,4 @@ header{
     60% {transform: translate(3px, 3px); }
     80% {transform: translate(3px, -3px)}
     to {transform: translate(0);}
- }
-
- button{
-    width: 300px;
-    height: 100px;
-    margin-left: 800px;
-    margin-top: 400px ;
-    border-radius: 30px;
-    font-size: 30px;
  }
