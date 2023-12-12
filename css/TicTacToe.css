@@ -33,6 +33,7 @@
     font-size: 12vmin;
     color: #d161ff;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border: black solid 1px;
   }
   #restart {
     font-size: 1.3em;
