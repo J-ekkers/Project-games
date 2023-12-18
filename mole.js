@@ -1,5 +1,6 @@
 console.log("mole.js is running");
 
+let Missed = "Missed hits";
 let currMoleTile;
 let currPlantTile;
 let score = 0;
@@ -52,5 +53,13 @@ function selectTile() {
         score += 1;
         document.getElementById("score").innerText = score.toString(); //update score html
     }
+
+    if (this != currMoleTile) {
+        score += -1;
+        Missed ++ ;
+        document.getElementById("score").innerText = score.toString(); 
+    }
+
+   
  
 }
