@@ -56,10 +56,10 @@ body{
  }
 
 
- .BKE{
+ .BKE, .overlay-BKE{
    width: 400px;
-   margin-left: 130px;
-   margin-top: 400px;
+   margin-left: 200px;
+   margin-top: 390px;
    border-radius: 20px;
    border: 3px solid black;
    display: block;
@@ -68,7 +68,7 @@ body{
  .WAM{
    width: 460px;
    margin-left: 730px;
-   margin-top: 160px;
+   margin-top: 150px;
    border-radius: 20px;
    border: 3px solid black;
    display: block;
@@ -95,12 +95,4 @@ body{
    left: 0;
    top: 0;
    z-index: 1;
-}
-
-.text-1{
-   width: 400px;
-   margin-left: 130px;
-   margin-top: 400px;
-   background-color: gray;
-   z-index: 10;
 }
