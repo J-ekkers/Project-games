@@ -1,6 +1,6 @@
 console.log("mole.js is running");
 
-let Missed = "Missed hits";
+let Missed = 0;
 let currMoleTile;
 let currPlantTile;
 let score = 0;
@@ -11,7 +11,6 @@ window.onload = function() {
 }
 
 function setGame() {
- 
     for (let i = 0; i < 9; i++) {
         let tile = document.createElement("div");
         tile.id = i.toString();
@@ -22,7 +21,6 @@ function setGame() {
 }
 
 function getRandomTile() {
-    //math.random --> 0-1 --> (0-1) * 9 = (0-9) --> round down to (0-8) integers
     let num = Math.floor(Math.random() * 9);
     return num.toString();
 }
@@ -30,6 +28,11 @@ function getRandomTile() {
 function setMole() {
     if (gameOver) {
         return;
+    }
+
+    if (score == -1) {
+
+        
     }
     if (currMoleTile) {
         currMoleTile.innerHTML = "";
@@ -51,15 +54,20 @@ function selectTile() {
     }
     if (this == currMoleTile) {
         score += 1;
-        document.getElementById("score").innerText = score.toString(); //update score html
     }
 
     if (this != currMoleTile) {
         score += -1;
-        Missed ++ ;
-        document.getElementById("score").innerText = score.toString(); 
+        Missed += 1 ;
+        console.log("missed:", Missed);
     }
 
    
- 
+    
+
+    // Update the score and missed hits on the scoreboard
+    document.getElementById("score").innerText = score.toString();
+    document.querySelector(".Missed").innerText = Missed.toString();
 }
+
+
