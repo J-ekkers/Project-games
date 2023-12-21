@@ -3,6 +3,7 @@
    margin: 0px;
    padding: 0px;
    background-color: #00AFB9;
+   cursor: url(/img/gadgets-and-devices-xbox-series-x-and-controller-cursor-pack2.png), pointer ;
 }
 
 body {
@@ -99,7 +100,7 @@ body {
    display: grid;
    grid-gap: 100px;
    grid-template-columns: repeat(3, 1fr);
-   grid-template-areas: 
+   grid-template-areas:
       "hd hd hd"
       "WAM BKE BTS"
       "WAM BKE BTS";
@@ -115,25 +116,62 @@ body {
    grid-area: BKE;
    width: 460px;
    height: 460px;
-   border-radius: 20px;
-   border: 3px solid black;
    display: block;
+   z-index: 2;
+   border-left: 3px solid black;
+   border-top-left-radius: 20px;
+   border-right: 3px solid black;
+   border-top-right-radius: 20px;
+   border-top: 3px solid black;
+   border-bottom: 2px solid black;
+}
+
+.BKE:hover{
+   cursor: url(/img/minimal-fried-egg-pointer\ 1.png), pointer;
 }
 
 .WAM {
    width: 460px;
    height: 460px;
-   border-radius: 20px;
-   border: 3px solid black;
    display: block;
    grid-area: WAM;
+   z-index: 2;
+   border-left: 3px solid black;
+   border-top-left-radius: 20px;
+   border-right: 3px solid black;
+   border-top-right-radius: 20px;
+   border-top: 3px solid black;
+   border-bottom: 2px solid black;
+}
+
+.WAM:hover{
+   cursor: url(/img/image_processing20220416-11036-1jsau2p.png), pointer;
 }
 
 .battleship {
    width: 460px;
    height: 460px;
-   border-radius: 20px;
-   border: 3px solid black;
    display: block;
    grid-area: BTS;
+   z-index: 2;
+   border-left: 3px solid black;
+   border-top-left-radius: 20px;
+   border-right: 3px solid black;
+   border-top-right-radius: 20px;
+   border-top: 3px solid black;
+   border-bottom: 2px solid black;
+   }
+
+   .battleship:hover {
+   cursor: url(/img/anker-removebg-preview.png), pointer ;
+      }
+
+h3 {
+   text-align: center;
+   border-left: 3px solid black;
+   border-bottom-left-radius: 20px;
+   border-right: 3px solid black;
+   border-bottom-right-radius: 20px;
+   border-bottom: 3px solid black;
+max-width: 460px;
 }
