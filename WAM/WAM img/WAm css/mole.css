@@ -24,7 +24,7 @@ body {
     /* board = 540 x 540, divide into 3x3 tiles --> 180 x 180 per div */
     width: 180px; 
     height: 180px;
-    background-image: url("./gravestone_PNG54.png");
+    background-image: url("//gravestone_PNG54.png");
     background-size: cover;
 }
 

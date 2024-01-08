@@ -1,0 +1,177 @@
+* {
+   box-sizing: border-box;
+   margin: 0px;
+   padding: 0px;
+   background-color: #00AFB9;
+   cursor: url(/img/gadgets-and-devices-xbox-series-x-and-controller-cursor-pack2.png), pointer ;
+}
+
+body {
+   display: grid;
+   margin-top: 5%;
+   grid-template-columns: repeat(4, 1fr);
+   grid-template-areas:
+      "gw gw gw gw"
+      "gw gw gw gw"
+      "wr wr wr wr"
+      "wr wr wr wr"
+   ;
+
+}
+
+.glitch-wrapper {
+   width: 17%;
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   background-color: #ffffff;
+   margin: auto;
+   grid-area: gw;
+}
+
+.glitch {
+   position: relative;
+   font-size: 120px;
+   font-weight: 700;
+   line-height: 1.2;
+   color: #000000;
+   letter-spacing: 8px;
+   z-index: 1;
+}
+
+.glitch:before,
+.glitch:after {
+   display: block;
+   content: attr(data-glitch);
+   position: absolute;
+   top: 0;
+   left: 0;
+   opacity: 0.8;
+}
+
+.glitch:before {
+   animation: glitch-color 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+   color: #f70000;
+   z-index: -1;
+}
+
+.glitch:after {
+   animation: glitch-color 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+   color: #0004ff;
+   z-index: -2;
+}
+
+@keyframes glitch-color {
+   0% {
+      transform: translate(0);
+   }
+
+   20% {
+      transform: translate(-3px, 3px);
+   }
+
+   40% {
+      transform: translate(-3px, -3px)
+   }
+
+   60% {
+      transform: translate(3px, 3px);
+   }
+
+   80% {
+      transform: translate(3px, -3px)
+   }
+
+   to {
+      transform: translate(0);
+   }
+}
+
+.glitch-wrapper {
+   position: relative;
+   z-index: 2;
+}
+
+.wrapper {
+   margin: 0px auto;
+   grid-area: wr;
+   display: grid;
+   grid-gap: 100px;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-areas:
+      "hd hd hd"
+      "WAM BKE BTS"
+      "WAM BKE BTS";
+   /* display: grid;
+   grid-gap: 15px;
+   grid-template-columns: repeat(9, 1fr);
+   width: 600px;
+   grid-template-areas: 
+   "hd BKE hd hd WAM hd hd BTS hd"; */
+}
+
+.BKE {
+   grid-area: BKE;
+   width: 460px;
+   height: 460px;
+   display: block;
+   z-index: 2;
+   border-left: 3px solid black;
+   border-top-left-radius: 20px;
+   border-right: 3px solid black;
+   border-top-right-radius: 20px;
+   border-top: 3px solid black;
+   border-bottom: 2px solid black;
+}
+
+.BKE:hover{
+   cursor: url(/img/minimal-fried-egg-pointer\ 1.png), pointer;
+}
+
+.WAM {
+   width: 460px;
+   height: 460px;
+   display: block;
+   grid-area: WAM;
+   z-index: 2;
+   border-left: 3px solid black;
+   border-top-left-radius: 20px;
+   border-right: 3px solid black;
+   border-top-right-radius: 20px;
+   border-top: 3px solid black;
+   border-bottom: 2px solid black;
+}
+
+.WAM:hover{
+   cursor: url(/img/image_processing20220416-11036-1jsau2p.png), pointer;
+}
+
+.battleship {
+   width: 460px;
+   height: 460px;
+   display: block;
+   grid-area: BTS;
+   z-index: 2;
+   border-left: 3px solid black;
+   border-top-left-radius: 20px;
+   border-right: 3px solid black;
+   border-top-right-radius: 20px;
+   border-top: 3px solid black;
+   border-bottom: 2px solid black;
+   }
+
+   .battleship:hover {
+   cursor: url(/img/anker-removebg-preview.png), pointer ;
+      }
+
+h3 {
+   text-align: center;
+   border-left: 3px solid black;
+   border-bottom-left-radius: 20px;
+   border-right: 3px solid black;
+   border-bottom-right-radius: 20px;
+   border-bottom: 3px solid black;
+max-width: 460px;
+}
