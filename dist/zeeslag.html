@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon77de599f0c4249625075.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32ad0cb2ad374739c7b4b3.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16dc7872edd8cc710255d7.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=Raleway&family=Rammetto+One&family=Press+Start+2P&family=Squada+One&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Battleship</title>
+    <script defer="defer" src="js/runtime.js"></script>
+    <script defer="defer" src="js/main.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header__logo">ZEESLAG</h1>
+        <div class="switch"><input class="switch__input" type="checkbox" id="themeSwitch" /> <label aria-hidden="true"
+                class="switch__label" for="themeSwitch">On</label>
+            <div aria-hidden="true" class="switch__marker"></div>
+        </div>
+    </header>
+    <main class="container">
+        <div class="screen screen__start">
+            <div class="message message__start"></div>
+            <form action="" method="" class="form__player-name"><label for="player-name"
+                    class="label__player-name">Vul je naam in</label> <input
+                    class="input__player-name" id="player-name" placeholder="Vul je naam in" value="Speler"
+                    maxlength="20" onclick="this.select()" required /> <button type="submit"
+                    class="btn btn__start">Begin</button></form>
+        </div>
+        <div class="screen screen__ship-placement hidden">
+            <div class="message message__ship-placement"></div>
+            <div class="ships__display">
+                <div class="ship__wrapper ship__wrapper-active" data-ship="carrier"><span
+                        class="ship__label">Carrier</span>
+                    <div class="ship__icon-wrapper">
+                        <div class="ship__icon-square"></div>
+                        <div class="ship__icon-square"></div>
+                        <div class="ship__icon-square"></div>
+                        <div class="ship__icon-square"></div>
+                        <div class="ship__icon-square"></div>
+                    </div>
+                </div>
+                <div class="ship__wrapper" data-ship="battleship"><span class="ship__label">Battleship</span>
+                    <div class="ship__icon-wrapper">
+                        <div class="ship__icon-square"></div>
+                        <div class="ship__icon-square"></div>
+                        <div class="ship__icon-square"></div>
+                        <div class="ship__icon-square"></div>
+                    </div>
+                </div>
+                <div class="ship__wrapper" data-ship="destroyer"><span class="ship__label">Destroyer</span>
+                    <div class="ship__icon-wrapper">
+                        <div class="ship__icon-square"></div>
+                        <div class="ship__icon-square"></div>
+                        <div class="ship__icon-square"></div>
+                    </div>
+                </div>
+                <div class="ship__wrapper" data-ship="submarine"><span class="ship__label">Submarine</span>
+                    <div class="ship__icon-wrapper">
+                        <div class="ship__icon-square"></div>
+                        <div class="ship__icon-square"></div>
+                        <div class="ship__icon-square"></div>
+                    </div>
+                </div>
+                <div class="ship__wrapper" data-ship="patroller"><span class="ship__label">Patroller</span>
+                    <div class="ship__icon-wrapper">
+                        <div class="ship__icon-square"></div>
+                        <div class="ship__icon-square"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="board board__ship-placement"></div>
+            <div class="btn-container__ship-placement"><button type="button" class="btn btn__rotate-ship">
+                    <div class="btn__rotate-label"> Draaien</div>
+                    <div class="key-shortcut">SPACEBAR</div>
+                </button></div>
+        </div>
+        <div class="screen screen__game-display hidden">
+            <div class="game-display__board-wrapper">
+                <div class="board board__self"></div>
+                <div class="board board__opponent"></div><button class="btn btn__reset">Restart</button>
+                <div class="overlay overlay__winner-display hidden"><span class="message message__winner-main">De
+                        winnaar is YES!</span> <span class="message message__winner-sub">Je hebt gewonnen</span> <button class="btn btn__start-again hidden">Nieuw spel</button>
+                </div>
+            </div>
+            <aside class="battle-log hidden">
+                <h3 class="battle-log__label">Battlelog</h3>
+                <div class="battle-log__entry-wrapper">
+                    <div class="battle-log__entry">Het spel is begonnen</div>
+                </div>
+            </aside>
+        </div>
+    </main>
+    <footer></footer>
+    <div class="overlay"></div>
+</body>
+
+</html>
